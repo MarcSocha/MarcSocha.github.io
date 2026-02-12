@@ -62,7 +62,7 @@ h1 {
 }
 
 .tagline {
-    font-size: 1.875rem;
+    font-size: 2rem;
     color: var(--background-color);
     margin-bottom: 16px;
     max-width: 768px;
@@ -71,7 +71,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     color: var(--orange-accent);
     margin-bottom: 48px;
     max-width: 672px;
@@ -105,12 +105,12 @@ h1 {
 }
 
 .btn-primary {
-    background-color: var(--orange-accent);
+    background-color: var(--accent-light-blue);
     color: white;
 }
 
 .btn-secondary {
-    background-color: var(--orange-accent);
+    background-color: var(--accent-light-blue);
     color: var(--background-color);
 }
 
@@ -311,7 +311,7 @@ h2 {
 }
 
 .btn-cta-secondary {
-    background-color: var(--orange-accent);
+    background-color: var(--accent-light-blue);
     color: var(--background-color);
 }
 
@@ -360,7 +360,7 @@ footer p {
     align-items: center;
     gap: 8px;
     font-size: 1.125rem;
-    color: var(--orange-accent);
+    color: var(--background-color);
     text-decoration: none;
     margin-bottom: 32px;
     background: none;
@@ -386,7 +386,7 @@ footer p {
 
 .content-card .date {
     font-size: 0.875rem;
-    color: var(--accent-light-blue);
+    color: var(--background-color);
     margin-bottom: 24px;
 }
 
@@ -406,7 +406,7 @@ footer p {
 }
 
 .content-card .contact {
-    color: var(--accent-light-blue);
+    color: var(--orange-accent);
 }
 
 .hidden {
