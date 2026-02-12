@@ -1,0 +1,466 @@
+/* ============================================
+   COLOR VARIABLES - Edit these to change colors
+   ============================================ */
+:root {
+    --primary-color: #1A365D;
+    --background-color: #ECE7DA;
+    --accent-light-blue: #159DC2;
+    --accent-blue-text: #007293;
+    --prompt-accent: #1F416F;
+    --orange-accent: #F56565;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Itim', cursive;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.logo-container {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 32px;
+    padding: 16px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    font-family: 'Spicy Rice', cursive;
+    font-size: 4rem;
+    color: var(--background-color);
+    margin-bottom: 24px;
+    letter-spacing: 0.08em;
+}
+
+.tagline {
+    font-size: 1.875rem;
+    color: var(--background-color);
+    margin-bottom: 16px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--orange-accent);
+    margin-bottom: 48px;
+    max-width: 672px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: transform 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: var(--orange-accent);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--orange-accent);
+    color: var(--background-color);
+}
+
+/* How It Works Section */
+.section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--background-color);
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--accent-blue-text);
+    border-radius: 24px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.icon-orange {
+    background-color: var(--orange-accent);
+}
+
+.icon-blue {
+    background-color: var(--accent-light-blue);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: var(--background-color);
+    margin-bottom: 16px;
+}
+
+.card p {
+    font-size: 1.125rem;
+    color: var(--background-color);
+    opacity: 0.9;
+}
+
+/* Prompts Section */
+.prompts-section {
+    margin-bottom: 80px;
+}
+
+.prompts-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--orange-accent);
+    margin-bottom: 48px;
+}
+
+.prompt-display {
+    max-width: 896px;
+    margin: 0 auto;
+}
+
+.prompt-card {
+    background-color: var(--accent-blue-text);
+    border-radius: 24px;
+    padding: 64px 40px;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.prompt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: var(--orange-accent);
+    opacity: 0.2;
+    transform: translate(25%, -25%);
+}
+
+.prompt-text {
+    font-size: 1.875rem;
+    color: var(--background-color);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    opacity: 0.5;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.dot.active {
+    background-color: var(--accent-light-blue);
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+/* CTA Section */
+.cta {
+    background-color: var(--accent-blue-text);
+    border-radius: 24px;
+    padding: 64px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: var(--orange-accent);
+    opacity: 0.3;
+    transform: translate(-50%, 50%);
+}
+
+.cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--orange-accent);
+    opacity: 0.3;
+    transform: translate(30%, -30%);
+}
+
+.cta h2 {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 24px;
+}
+
+.cta p {
+    font-size: 1.25rem;
+    color: var(--background-color);
+    opacity: 0.9;
+    max-width: 672px;
+    margin: 0 auto 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.cta .download-buttons {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0;
+}
+
+.btn-cta-secondary {
+    background-color: var(--orange-accent);
+    color: var(--background-color);
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+footer p {
+    font-size: 1.125rem;
+    color: var(--background-color);
+}
+
+.footer-links {
+    display: flex;
+    gap: 32px;
+}
+
+.footer-links a {
+    font-size: 1.125rem;
+    color: var(--accent-light-blue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Content Pages */
+.content-page {
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.125rem;
+    color: var(--orange-accent);
+    text-decoration: none;
+    margin-bottom: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Itim', cursive;
+}
+
+.back-button:hover {
+    opacity: 0.7;
+}
+
+.content-card {
+    background-color: var(--accent-blue-text);
+    border-radius: 24px;
+    padding: 48px;
+}
+
+.content-card h1 {
+    font-size: 3.5rem;
+    margin-bottom: 32px;
+}
+
+.content-card .date {
+    font-size: 0.875rem;
+    color: var(--accent-light-blue);
+    margin-bottom: 24px;
+}
+
+.content-card p {
+    opacity: 0.9;
+    margin-bottom: 24px;
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.content-card h2 {
+    font-size: 1.875rem;
+    color: var(--orange-accent);
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.content-card .contact {
+    color: var(--accent-light-blue);
+}
+
+.hidden {
+    display: none;
+}
+
+/* SVG Icons */
+.icon {
+    width: 36px;
+    height: 36px;
+    stroke: white;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.icon-small {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .prompt-text {
+        font-size: 1.5rem;
+    }
+
+    .content-card {
+        padding: 32px 24px;
+    }
+
+    .content-card h1 {
+        font-size: 2.5rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

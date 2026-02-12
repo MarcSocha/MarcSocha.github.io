@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finetunes - Connect Through Music</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Spicy+Rice&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home-page">
+        <div class="container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="logo-container">
+                    <img src="assets/logo3_color_no.svg" alt="Finetunes Logo">
+                </div>
+                
+                <h1>Finetunes</h1>
+                
+                <p class="tagline">Connect through music, one memory at a time</p>
+                
+                <p class="subtitle">Submit songs for weekly prompts, vote on others' picks, and discover the soundtrack to shared experiences</p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        App Store
+                    </a>
+                    <a href="#" class="btn btn-secondary">
+                        <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="section">
+                <h2>How It Works</h2>
+                
+                <div class="grid">
+                    <div class="card">
+                        <div class="icon-circle icon-orange">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                        </div>
+                        <h3>Get a Weekly Prompt</h3>
+                        <p>Each week, discover a new scene or moment that sparks memories</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-circle icon-blue">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>Submit & Vote</h3>
+                        <p>Share your song choice and vote on what others picked</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-circle icon-orange">
+                            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        </div>
+                        <h3>Discover the Top Picks</h3>
+                        <p>See the week's best submissions and get a personalized summary</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prompts Section -->
+            <div class="prompts-section">
+                <h2>This Week's Prompts</h2>
+                <p class="prompts-subtitle">Tap the dots to explore</p>
+                
+                <div class="prompt-display">
+                    <div class="prompt-card">
+                        <p class="prompt-text" id="prompt-text">"song im playing while crumbling under the pressure of parallel parking while cars are watching."</p>
+                    </div>
+                    
+                    <div class="dots">
+                        <button class="dot active" onclick="changePrompt(0)"></button>
+                        <button class="dot" onclick="changePrompt(1)"></button>
+                        <button class="dot" onclick="changePrompt(2)"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta">
+                <h2>Ready to find your soundtrack?</h2>
+                <p>Join the community and start sharing the music that defines your moments</p>
+                
+                <div class="download-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download on App Store
+                    </a>
+                    <a href="#" class="btn btn-cta-secondary">
+                        <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Get it on Google Play
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>© 2025 Finetunes. All rights reserved.</p>
+                <div class="footer-links">
+                    <a onclick="showPage('privacy')">Privacy Policy</a>
+                    <a onclick="showPage('about')">About</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Page -->
+    <div id="privacy-page" class="hidden">
+        <div class="content-page">
+            <button class="back-button" onclick="showPage('home')">
+                <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                Back to Home
+            </button>
+            
+            <div class="content-card">
+                <h1>Privacy Policy</h1>
+                
+                <p class="date">Last updated: February 12, 2025</p>
+                
+                <p>Welcome to Finetunes. We are committed to protecting your privacy and ensuring you have a positive experience while using our app. This Privacy Policy outlines how we collect, use, and protect your information.</p>
+                
+                <h2>Information We Collect</h2>
+                <p>We collect information that you provide directly to us when you create an account, submit songs, vote on submissions, and interact with other users. This may include your username, email address, profile information, and music preferences. We also collect information about your usage of the app, including the prompts you engage with and the songs you submit.</p>
+                
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect to provide, maintain, and improve our services, including to personalize your experience, create weekly summaries, facilitate voting and community features, and communicate with you about updates and new features. Your song submissions and votes help us build a community-driven music discovery platform.</p>
+                
+                <h2>Information Sharing</h2>
+                <p>We do not sell your personal information. Your song submissions and username may be visible to other Finetunes users as part of the community voting and discovery features. We may share aggregated, non-personally identifiable information publicly or with our partners.</p>
+                
+                <h2>Data Security</h2>
+                <p>We take reasonable measures to help protect your personal information from loss, theft, misuse, unauthorized access, disclosure, alteration, and destruction. However, no internet or email transmission is ever fully secure or error-free.</p>
+                
+                <h2>Your Rights</h2>
+                <p>You have the right to access, update, or delete your personal information at any time through your account settings. You may also request a copy of your data or ask us to delete your account entirely. For any privacy-related requests, please contact us at privacy@finetunes.app.</p>
+                
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically for any changes.</p>
+                
+                <h2>Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy or our practices, please contact us at support@finetunes.app.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="hidden">
+        <div class="content-page">
+            <button class="back-button" onclick="showPage('home')">
+                <svg class="icon icon-small" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                Back to Home
+            </button>
+            
+            <div class="content-card">
+                <h1>About Finetunes</h1>
+                
+                <p>Finetunes was born from a simple observation: music has an incredible power to connect us to moments in time. A single song can transport you back to your first day of college, a summer road trip with friends, or that quiet moment standing in the snow under a streetlamp.</p>
+                
+                <h2>Our Mission</h2>
+                <p>We believe that music is more than just entertainment—it's a shared language of human experience. Finetunes creates a space where people can discover new music through the lens of relatable moments, those specific scenes and scenarios that shape who we are. Every week, we invite our community to submit songs inspired by prompts that capture these universal-yet-personal experiences.</p>
+                
+                <h2>How It Started</h2>
+                <p>The idea for Finetunes emerged from late-night conversations about how certain songs become inseparable from specific memories. We realized that while music streaming services are great at algorithmic recommendations, they miss the human element—the stories, emotions, and shared experiences that make music truly meaningful. We wanted to build something that brings people together through these connections.</p>
+                
+                <h2>What Makes Us Different</h2>
+                <p>Unlike traditional music discovery apps, Finetunes isn't about genres or popularity charts. It's about moments. Our weekly prompts are carefully crafted to be specific enough to spark vivid memories, yet universal enough that everyone can relate. Whether you're remembering the anxiety of parallel parking or the peace of fresh snowfall, there's a song that captures that feeling—and probably hundreds of others who felt the same way.</p>
+                
+                <h2>Join Our Community</h2>
+                <p>Finetunes is more than an app—it's a community of music lovers who understand that the best playlists aren't just collections of songs, but soundtracks to our lives. We're excited to have you here, sharing your memories and discovering the moments that others have set to music.</p>
+                
+                <p class="contact">Have feedback or want to share your Finetunes story? Reach out to us at hello@finetunes.app</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
