@@ -7,6 +7,15 @@ const prompts = [
 
 let currentPrompt = 0;
 
+window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash === '#privacy') {
+        showPage('privacy');
+    } else if (hash === '#about') {
+        showPage('about');
+    }
+});
+
 // Change prompt function
 function changePrompt(index) {
     currentPrompt = index;
