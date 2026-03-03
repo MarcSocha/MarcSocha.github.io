@@ -38,7 +38,7 @@ body {
 .logo-container {
     width: 192px;
     height: 192px;
-    border-radius: 50%;
+    border-radius: 30%;
     background-color: var(--background-color);
     display: flex;
     align-items: center;
